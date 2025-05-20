@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fact or Fiction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Fact or Fiction</h1>
+
+    <div id="ios-screen" class="hidden">
+      <p>You’re on an iPhone or iPad. You’ll connect to the hosted game.</p>
+      <a href="https://your-hosted-game.com" class="button">Join Hosted Game</a>
+    </div>
+
+    <div id="non-ios-screen" class="hidden">
+      <p>We recommend downloading the game to host it locally and avoid server load.</p>
+      <a href="/downloads/fact-or-fiction.zip" class="button">Download Game Package (ZIP)</a>
+      <a href="https://your-hosted-game.com" class="button alt">Or Join Hosted Game Anyway</a>
+    </div>
+
+    <div id="manual-override" class="hidden">
+      <p>What device are you using?</p>
+      <button onclick="showIOS()">iPhone / iPad</button>
+      <button onclick="showNonIOS()">Mac / PC / Android</button>
+    </div>
+
+    <p class="manual-link" onclick="manualSelect()">Not your device? Tap here to choose manually.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
